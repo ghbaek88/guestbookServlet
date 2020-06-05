@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방명록</title>
+</head>
+<body>
+<h1 align="center">글쓰기<br></h1>
+ <form name="guestbookWriteForm" method="post" action="/guestbookServlet/GuestbookWriteServlet">
+  <table border="1" cellspacing="0" cellpadding="3" align="center">
+  
+   <!-- 작성자 만들기 -->
+   <tr>
+    <td width="100" align="center"> 작성자 </td>
+    <td><input type="text" size="15" name="name" placeholder="작성자 입력"></td>
+   </tr>
+   
+   <!-- 이메일 만들기 -->
+   <tr>
+    <td width="100" align="center"> 이메일 </td>
+    <td><input type="text" size="20" name="email" placeholder="이메일 입력"></td>
+   </tr>
+   
+   <!-- 홈페이지 만들기 -->
+   <tr>
+    <td width="100" align="center"> 홈페이지 </td>
+    <td><input type="text" size="25" name="homepage" value="http://">  </td>
+   </tr>
+   
+   <!-- 제목 만들기 -->
+   <tr>
+    <td width="100" align="center">
+     <font color="red">*</font>
+          제목 </td>
+    <td><input type="text" size="30" name="subject" placeholder="제목 입력"></td>
+   </tr>
+     
+   <!-- 내용 만들기 -->
+   <tr>
+    <td width="100" align="center">
+     <font color="red">*</font>
+          내용 </td>
+   	<td><textarea name="content" id="content" rows="12" cols="52" style="resize:none;" placeholder="내용을 입력"></textarea></td>
+   </tr>
+   
+   <!-- 버튼 만들기 -->
+   <tr> 
+    <td colspan="2" align="center">
+	<input type="button" onclick="checkWriteForm()" value="글작성"> &emsp; 
+	<input type="reset" value="다시작성"> &emsp; 
+	<input type="button" onclick=location.href='/guestbookServlet/GuestbookListServlet?pg=1' value="글목록"> 
+	</td>
+   </tr>
+      
+  </table>
+ </form>
+</body>
+ <!-- html위치에서 상대 번지이다 -->
+ <script type="text/javascript" src="../js/guestbook.js"></script> 
+</html>
